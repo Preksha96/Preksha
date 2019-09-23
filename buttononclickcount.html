@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+body{
+background-color:#e3e1d8;
+
+}
+#display{
+    margin: 0px auto;
+    width:100px;
+    background-color: yellow;
+    height: 40px;
+}
+#yellow{
+    margin: 0px auto;
+    width:100px;
+    background-color: yellow;
+    height: 40px;
+}
+
+#red{
+    width:100px;
+    background-color: red;
+    height: 40px;
+    margin-left: 476px;
+}
+#black{
+    width:100px;
+    background-color: black;
+    height: 40px;
+    color: white;
+}
+#green{
+    width:100px;
+    background-color: green;
+    height: 40px;
+    margin: auto;
+}
+/*#redcount{
+  margin-left: 476px;
+}*/
+.controls{
+margin-top: 20px;
+}
+</style>
+<body>
+<center> 
+        <div id="display">hh</div>
+</center>
+<center>
+        <div id="redcount"></div>
+        <div id="blackcount"></div>
+        <div id="greencount"></div>
+
+    <div class="controls">
+        
+
+            <button id="red" onclick="red()">Red</button>
+            <button id="black" onclick="black()"> Black</button>
+            <button id="green" onclick="green()">Green</button>
+
+            <!--<button id="yellow" onclick="disp()">Yellow</button>-->
+			
+    </div>
+ </center> 
+
+</body>
+<script>
+    var color = 'yellow';
+    var redcount = 0;
+    var blackcount= 0;
+    var greencount = 0;
+	
+  
+var display = document.getElementById('display');
+display.addEventListener("mouseout",function(){display.style.backgroundColor="yellow"; });
+/*function setvar(colo){
+ color= colo;
+ }
+ if (color == 'red')
+ {
+ red();
+ }
+ else if(color == 'green')
+ {
+ green();
+ }
+ else {
+black();
+}*/
+function red(){
+    redcount++
+    document.getElementById('redcount').innerHTML='Red count: ' + redcount;
+    display.style.backgroundColor = "red";
+}
+function black(){
+    blackcount++
+    document.getElementById('blackcount').innerHTML='Black count: ' + blackcount;
+    display.style.backgroundColor = "black";
+}
+function green(){
+    greencount++
+    document.getElementById('greencount').innerHTML='Green count: ' + greencount;
+    display.style.backgroundColor = "green";
+
+}
+
+
+
+function myFunction(){
+  document.getElementsByTagName("BODY")[0].style.backgroundColor = "yellow";
+
+}
+</script>
+</html>
